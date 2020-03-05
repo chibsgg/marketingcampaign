@@ -2,21 +2,38 @@
 
 class CampaignPlan {
     private $campaignName;
-    private $dateStart;
+    private $dateStart; 
     private $dateEnd;
-    private $plan;
+    private $dateInterval;
     private $msgTemplate;
     
-    public function __construct($campaignName, $dateStart, $dateEnd, $plan, $msgTemplate) {
+    public function __construct($campaignName, $dateStart, $dateEnd, $dateInterval, $msgTemplate) {
         $this->campaignName = $campaignName;
         $this->dateStart = $dateStart;
         $this->dateEnd = $dateEnd;
-        $this->plan = $plan;
+        $this->dateInterval = $dateInterval;
         $this->msgTemplate = $msgTemplate;
-    }
-    public function getPlan($campaignName){
-       
+    }  
+    
+    public function getCampaignName() {
+        return $this->campaignName;
     }
     
-        
+    public function getDateStart() {
+        return $this->dateStart;
+    }
+
+    public function getDateEnd() {
+        return $this->dateEnd;
+    }
+
+    public function getDateInterval() {
+        return $this->dateInterval;
+    }
+
+    public function getMsgTemplate() {
+        return $this->msgTemplate;
+    }
+
+
 }

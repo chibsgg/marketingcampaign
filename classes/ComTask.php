@@ -7,43 +7,51 @@ class ComTask {
     private $phoneNumber;
     private $complete;
     
-    function getDate() {
+    public function __construct($date, $name, $msgText, $phoneNumber) {
+        $this->date = $date;
+        $this->name = $name;
+        $this->msgText = $msgText;
+        $this->phoneNumber = $phoneNumber;
+        $this->complete = false;
+    }
+
+    public function getDate() {
         return $this->date;
     }
 
-    function getName() {
+    public function getName() {
         return $this->name;
     }
 
-    function getMsgText() {
+    public function getMsgText() {
         return $this->msgText;
     }
 
-    function getPhoneNumber() {
+    public function getPhoneNumber() {
         return $this->phoneNumber;
     }
 
-    function getComplete() {
+    public function getComplete() {
         return $this->complete;
     }
 
-    function setDate($date) {
+    public function setDate($date) {
         $this->date = $date;
     }
 
-    function setName($name) {
+    public function setName($name) {
         $this->name = $name;
     }
 
-    function setMsgText($msgText) {
+    public function setMsgText($msgText) {
         $this->msgText = $msgText;
     }
 
-    function setPhoneNumber($phoneNumber) {
+    public function setPhoneNumber($phoneNumber) {
         $this->phoneNumber = $phoneNumber;
     }
 
-    function setComplete($complete) {
+    public function setComplete($complete) {
         $this->complete = $complete;
     }
 }
